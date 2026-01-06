@@ -1,11 +1,11 @@
-﻿# 多协议代理一键部署脚本 v3.1.6
+# 多协议代理一键部署脚本 v3.1.6
 
 一个简单易用的多协议代理部署脚本，支持 **14 种主流协议**，服务端/客户端一键安装，适用于 Alpine、Debian、Ubuntu、CentOS 等 Linux 发行版。
 
 > 🙏 **声明**：本人只是一个搬运工，脚本灵感来源于网络上的各种优秀项目，特别感谢 [mack-a/v2ray-agent](https://github.com/mack-a/v2ray-agent) 八合一脚本的启发。
 
 ---
-💬 [Telegram 交流群](https://t.me/+BdstYRZh8GA2ZTFh)
+💬 [Telegram 交流群](https://t.me/+amAwHtdsVecwZWIx)
 
 ## 🆕 v3.1.6 更新
 
