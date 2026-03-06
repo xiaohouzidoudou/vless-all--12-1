@@ -411,8 +411,3 @@ apk add curl jq unzip iproute2 nginx
 
 MIT License
 
----
-
-## 📈 Star 历史
-
-[![Star History Chart](https://api.star-history.com/svg?repos=Chil30/vless-all-in-one&type=Date)](https://star-history.com/#Chil30/vless-all-in-one&Date)
