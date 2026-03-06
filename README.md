@@ -1,11 +1,5 @@
 # Vless-all-In-One多协议代理一键部署脚本
 
-[![GitHub Stars](https://img.shields.io/github/stars/Chil30/vless-all-in-one?style=flat-square&logo=github)](https://github.com/Chil30/vless-all-in-one/stargazers)
-[![GitHub Forks](https://img.shields.io/github/forks/Chil30/vless-all-in-one?style=flat-square&logo=github)](https://github.com/Chil30/vless-all-in-one/network/members)
-[![GitHub Issues](https://img.shields.io/github/issues/Chil30/vless-all-in-one?style=flat-square&logo=github)](https://github.com/Chil30/vless-all-in-one/issues)
-[![GitHub License](https://img.shields.io/github/license/Chil30/vless-all-in-one?style=flat-square)](https://github.com/Chil30/vless-all-in-one/blob/main/LICENSE)
-[![GitHub Downloads](https://img.shields.io/github/downloads/Chil30/vless-all-in-one/total?style=flat-square&logo=github)](https://github.com/Chil30/vless-all-in-one/releases)
-
 一个简单易用的多协议代理部署脚本，支持 **15 种主流协议**，服务端/客户端一键安装，适用于 Alpine、Debian、Ubuntu、CentOS 等 Linux 发行版。
 
 > 🙏 **声明**：本人只是一个搬运工，脚本灵感来源于网络上的各种优秀项目，特别感谢 [mack-a/v2ray-agent](https://github.com/mack-a/v2ray-agent) 八合一脚本的启发。
@@ -73,37 +67,6 @@ vless
 | ShadowTLS 套壳 | ❌ | ❌ | ❌ | ❌ | TLS 伪装 |
 
 > 💡 **Reality/XHTTP 域名说明**：v3.1.7 起支持配置真实域名，可实现「偷自己域名流量」，同时提供伪装网页功能。
-
-### 🎯 协议选择指南
-
-**高强度审查环境（首选）：**
-- **VLESS + Reality** - 借用真实网站 TLS 身份，流量特征与目标网站一致，无需维护
-- **VLESS + XHTTP + Reality** - 避免 TLS-in-TLS 特征，HTTP/2 多路复用
-- **VLESS + WS + TLS + CDN** - 通过 Cloudflare 等 CDN 隐藏真实 IP
-
-**被墙 IP 救活：**
-- **VLESS + WS + TLS + CDN** - 通过 Cloudflare 等 CDN 隐藏真实 IP
-- **VMess + WS + CDN** - 必须配合 CDN 使用，不建议裸连
-
-**游戏/低延迟场景：**
-- **Hysteria2 / TUIC** - UDP 加速，但需注意 QUIC 协议已可被 GFW 检测
-- 建议启用端口跳跃并配合其他协议作为备用
-
-**端口复用场景：**
-- **VLESS-Vision / Trojan** - 作为 TLS 主协议监听 8443
-- **VLESS-WS / VMess-WS / Trojan-WS** - 作为回落子协议共享端口
-
-> ⚠️ **重要提示**：
-> - UDP/QUIC 协议（Hysteria2、TUIC）虽然性能好，但更容易被检测和封锁
-> - Shadowsocks 建议仅在 TCP + 多路复用模式下使用，避免 UDP 直连
-> - NaïveProxy 需要频繁更新以匹配 Chrome 版本，否则指纹不匹配反而更易暴露
-> - 所有 TLS 协议都应使用真实域名证书，避免自签名证书
-> - **Reality 是目前最稳定的选择**：无需跟随浏览器更新，维护成本低
-> - 建议准备多种协议组合，不要依赖单一方案
-
----
-
-
 
 ### 客户端脚本
 
@@ -345,80 +308,7 @@ vless → 9) CF Tunnel(Argo)
 | **VLESS-WS** | 需要域名证书 | |
 | **VMess-WS** | 需要域名证书 | |
 
-> 💡 **推荐使用 VLESS-WS（无TLS）**：安装时选择「VLESS-WS-CF (无TLS)」，无需申请证书，CF Tunnel 自动提供 TLS 加密。
 
-> 📖 详细使用方法请参阅 [USE_GUIDE.md](USE_GUIDE.md#cf-tunnelargo)
-
----
-
-## 🖥️ 界面预览
-
-### 主菜单
-```
-═════════════════════════════════════════════
-      多协议代理 一键部署  [服务端]
-      作者: Chil30  快捷命令: vless
-      https://github.com/Chil30/vless-all-in-one
-═════════════════════════════════════════════
-  服务端管理
-  系统: ubuntu | 架构: Xray+Sing-box 双核
-  状态: ● 运行中
-  协议: VLESS+Reality, VLESS-WS, Hysteria2
-  端口: 443, 10999
-  分流: 3条规则→Japan+04+Amazon
-─────────────────────────────────────────────
-  1) 安装新协议 (多协议共存)
-  2) 核心版本管理 (Xray/Sing-box)
-  3) 卸载指定协议
-  4) 用户管理 (多用户/流量/通知)
-  ───────────────────────────────────────────
-  5) 查看协议配置
-  6) 订阅服务管理
-  7) 管理协议服务
-  8) 分流管理
-  9) CF Tunnel(Argo)
-  ───────────────────────────────────────────
- 10) BBR 网络优化
- 11) 查看运行日志
-  u) 检查更新
-  0) 退出
-─────────────────────────────────────────────
-```
-
-> 📖 更多界面预览请参阅 [USE_GUIDE.md](USE_GUIDE.md)
-
----
-
-## 📱 客户端推荐
-
-| 平台 | 推荐客户端 | 订阅支持 |
-|------|-----------|----------|
-| **Windows** | [Clash Verge Rev](https://github.com/clash-verge-rev/clash-verge-rev) | ✅ Clash 订阅 |
-| **Windows** | [V2rayN](https://github.com/2dust/v2rayN) | ✅ V2Ray 订阅 |
-| **macOS** | [Clash Verge Rev](https://github.com/clash-verge-rev/clash-verge-rev) | ✅ Clash 订阅 |
-| **macOS** | [Surge](https://nssurge.com/) | ✅ Surge 订阅 |
-| **iOS** | [Shadowrocket](https://apps.apple.com/app/shadowrocket/id932747118) | ✅ 通用订阅 |
-| **iOS** | [Surge](https://apps.apple.com/app/surge-5/id1442620678) | ✅ Surge 订阅 |
-| **iOS** | [Loon](https://apps.apple.com/app/loon/id1373567447) | ✅ V2Ray 订阅 |
-| **Android** | [Clash Meta](https://github.com/MetaCubeX/ClashMetaForAndroid) | ✅ Clash 订阅 |
-| **Android** | [V2rayNG](https://github.com/2dust/v2rayNG) | ✅ V2Ray 订阅 |
-
-### XHTTP 协议客户端支持
-
-> ⚠️ **注意**: XHTTP 是较新的协议，客户端支持有限
-
-| 平台 | 客户端 | XHTTP 支持 |
-|------|--------|:---------:|
-| Android | V2rayNG 1.8.31+ | ✅ |
-| Android | NekoBox | ✅ |
-| iOS | Streisand | ✅ |
-| iOS | Shadowrocket | ❌ |
-| iOS | Quantumult X | ❌ |
-| Windows | V2rayN (Xray核心) | ✅ |
-
-> 💡 iOS 用户如需 CDN 支持，建议改用 **VLESS+WS+TLS** 协议，兼容性更好。
-
----
 
 ## 🔧 代理模式说明 (客户端)
 
@@ -531,46 +421,6 @@ apk add curl jq unzip iproute2 nginx
 
 ---
 
-## ☕ 支持项目
-
-> 🎭 **生活不易，赛博卖艺**
-
-如果这个脚本对你有帮助，欢迎通过以下方式支持：
-
-- ⭐ 给项目点个 **Star**，这是最大的鼓励！
-- 🖥️ 通过下方推荐链接 **购买服务器**，你获得优惠我获得返佣。
-- 💬 加入 [Telegram 群组](https://t.me/vless_vaio) 交流反馈
-
-### 购买服务器
-
-| 服务商 | 特点 | 链接 |
-|--------|------|------|
-| **VIP Cloud** | 原生IP / 解锁流媒体 / CN2GIA | [购买](https://www.vipcloud.cc/aff/QXUUKZSH) |
-| **Aether Cloud** | 原生IP / IPv6家宽 / 高性价比 | [购买](https://billing.aethercloud.io?ref=Ers87GElwp) |
-| **AkileCloud** | 多地区 / SOCKS5落地 / 家宽 IP | [购买](https://akile.io/register?aff_code=b349580b-113a-4b42-ab76-c2db81c5c22d) |
-| **YT.NET** | 原生IP / 深港节点 / BGP国际网络 | [购买](https://cloud.yt.net/?ref=13192) |
-| **lain.sh** | 原生IP / 解锁流媒体 / 家宽 ISP | [购买](https://dash.lain.sh?ref=Charonlio) |
-| **CstoneCloud** | 住宅双ISP / 解锁流媒体 / 直连&五网回程9929 | [购买](https://www.cstonecloud.com/aff.php?aff=358) |
-| **SkylineConnect** | 软银/Lumen / 大陆优化 / 大流量服务器 | [购买](https://www.skylineconnect.io/signup?aff=01CC63AP) |
-| **Geelinx** | 解锁流媒体 / 大陆优化 / 单向带宽计费 | [购买](https://www.geelinx.com/aff/HLGCSMDN) |
-
-### 🎁 RoxyBrowser 指纹浏览器 - 专属链接注册享 10% 优惠，👆 点击图片注册
-
-<a href="https://roxybrowser.com?code=0128SUFA" target="_blank"> <img src="https://roxybrowser.com/banner_picture_new/link_c/zh/728_90_1x.png" alt="https://roxybrowser.com?code=0128SUFA" srcset="https://roxybrowser.com/banner_picture_new/link_c/zh/728_90_1x.png 1x, https://roxybrowser.com/banner_picture_new/link_c/zh/728_90_2x.png 2x"> </a>
-
----
-## 🙏 致谢
-
-### 灵感来源
-- [mack-a/v2ray-agent](https://github.com/mack-a/v2ray-agent) - 八合一共存脚本
-
-### 核心组件
-- [XTLS/Xray-core](https://github.com/XTLS/Xray-core) - 代理核心引擎
-- [SagerNet/sing-box](https://github.com/SagerNet/sing-box) - Sing-box 核心
-- [apernet/hysteria](https://github.com/apernet/hysteria) - Hysteria2 协议
-- [EAimTY/tuic](https://github.com/EAimTY/tuic) - TUIC 协议
-- [ihciah/shadow-tls](https://github.com/ihciah/shadow-tls) - ShadowTLS 协议
-- [ViRb3/wgcf](https://github.com/ViRb3/wgcf) - WARP WireGuard 配置生成
 
 ---
 
