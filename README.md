@@ -23,30 +23,6 @@ vless
 # 确认安装
 ```
 
-安装完成后显示：
-- **JOIN 码** - 复制给客户端使用
-- **分享链接** - 可导入 v2rayN、Clash、小火箭等
-- **二维码** - 手机扫码导入
-- **订阅链接** - Clash/Surge/V2Ray/Loon 订阅
-| # | 协议 | 特点 | 推荐场景 | 抗检测评级 | 风险提示 |
-|---|------|------|----------|-----------|----------|
-| 1 | **VLESS + Reality** | 抗封锁能力强，无需域名 | 🌟 首选推荐 | ⭐⭐⭐⭐⭐ | ✅ 借用真实网站TLS身份，流量与目标网站一致，无需维护 |
-| 2 | **VLESS + Reality + XHTTP** | 多路复用，性能更优 | 高并发场景 | ⭐⭐⭐⭐⭐ | ✅ HTTP/2多路复用，避免TLS-in-TLS特征 |
-| 3 | **VLESS + WS + TLS** | CDN 友好，可作回落 | 被墙 IP 救活 | ⭐⭐⭐⭐ | ⚠️ 需真实证书，避免TLS指纹；建议配合CDN |
-| 4 | **VMess + WS** | 回落分流/免流 | 端口复用 | ⭐⭐ | ⚠️ 已知漏洞：填充字段可被识别（[CVE](https://github.com/v2fly/v2ray-core/issues/2054)），必须配合CDN |
-| 5 | **VLESS-XTLS-Vision** | TLS主协议，支持回落 | 稳定传输 | ⭐⭐⭐⭐ | ✅ Vision专门解决TLS-in-TLS检测问题 |
-| 6 | **SOCKS5** | 经典代理协议 | 通用性强 | ⭐ | ❌ 明文传输，仅适合内网或本地环境 |
-| 7 | **Shadowsocks 2022** | 新版加密，性能好 | SS 用户迁移 | ⭐⭐ | ⚠️ GFW主动探测+被动检测（[研究](https://gfw.report/blog/gfw_shadowsocks/)），UDP易暴露，建议TCP+多路复用 |
-| 8 | **Hysteria2** | UDP 加速，端口跳跃 | 游戏/视频 | ⭐⭐ | ⚠️ GFW已可解密QUIC初始包，端口跳跃仅能缓解 |
-| 9 | **Trojan** | TLS主协议，支持回落 | 伪装 HTTPS | ⭐⭐⭐ | ⚠️ 有TLS指纹风险，需真实证书+回落配置 |
-| 10 | **Trojan + WS** | WebSocket 传输，可做回落 | 端口复用 | ⭐⭐⭐ | ⚠️ 配合CDN可提升隐蔽性 |
-| 11 | **Snell v4** | Surge 专用协议 (支持 ShadowTLS) | iOS/Mac 用户 | ⭐⭐⭐ | ⚠️ 闭源协议，建议启用ShadowTLS增强 |
-| 12 | **Snell v5** | Surge 5.0 新版协议 (支持 ShadowTLS) | 最新 Surge | ⭐⭐⭐ | ⚠️ 闭源协议，建议启用ShadowTLS增强 |
-| 13 | **AnyTLS** | 多协议 TLS 代理 | 抗审查能力强 | ⭐⭐⭐⭐ | ✅ 多协议混合，增加识别难度 |
-| 14 | **TUIC v5** | QUIC 协议，端口跳跃 | 低延迟 | ⭐⭐ | ⚠️ QUIC易被检测，端口跳跃可缓解 |
-| 15 | **NaïveProxy** | HTTP/2 代理，抗检测 | 伪装能力强 | ⭐⭐⭐ | ⚠️ 需与Chrome版本同步，伊朗已被检测（[Issue](https://github.com/klzgrad/naiveproxy/issues/404)），维护成本高 |
-
-> 💡 **ShadowTLS 插件**：Snell v4、Snell v5、SS2022 安装时可选择启用 ShadowTLS (v3) 插件，实现 TLS 流量伪装。
 
 ### 📊 协议特性对比
 
