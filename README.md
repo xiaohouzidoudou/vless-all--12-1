@@ -13,10 +13,6 @@
 ---
 💬 [Telegram 交流群](https://t.me/vless_vaio)
 
-
-> <img src="https://nicejwin.github.io/CareServerWebSite/assets/img/logo.png" height="50"> [CareServer](https://apps.apple.com/us/app/careserver/id6474921250) - 服务器实时监控(CPU/内存/磁盘) / 容器管理(Docker/Podman) / 端口转发(本地/远程/动态) / SFTP 文件管理 / 代理功能(SOCKS/HTTP) / 分组管理
-## ✨ 支持协议
-
 | # | 协议 | 特点 | 推荐场景 | 抗检测评级 | 风险提示 |
 |---|------|------|----------|-----------|----------|
 | 1 | **VLESS + Reality** | 抗封锁能力强，无需域名 | 🌟 首选推荐 | ⭐⭐⭐⭐⭐ | ✅ 借用真实网站TLS身份，流量与目标网站一致，无需维护 |
