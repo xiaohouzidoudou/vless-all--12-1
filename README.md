@@ -12,7 +12,28 @@
 
 ---
 💬 [Telegram 交流群](https://t.me/vless_vaio)
+## 🚀 快速开始
 
+### 一键安装服务端
+
+```bash
+wget -O vless-server.sh https://raw.githubusercontent.com/Chil30/vless-all-in-one/main/vless-server.sh && chmod +x vless-server.sh && ./vless-server.sh
+```
+
+### 服务端安装
+
+```bash
+vless
+# 选择 1) 安装新协议
+# 选择协议 (推荐 1-VLESS+Reality)
+# 确认安装
+```
+
+安装完成后显示：
+- **JOIN 码** - 复制给客户端使用
+- **分享链接** - 可导入 v2rayN、Clash、小火箭等
+- **二维码** - 手机扫码导入
+- **订阅链接** - Clash/Surge/V2Ray/Loon 订阅
 | # | 协议 | 特点 | 推荐场景 | 抗检测评级 | 风险提示 |
 |---|------|------|----------|-----------|----------|
 | 1 | **VLESS + Reality** | 抗封锁能力强，无需域名 | 🌟 首选推荐 | ⭐⭐⭐⭐⭐ | ✅ 借用真实网站TLS身份，流量与目标网站一致，无需维护 |
@@ -82,28 +103,7 @@
 
 ---
 
-## 🚀 快速开始
 
-### 一键安装服务端
-
-```bash
-wget -O vless-server.sh https://raw.githubusercontent.com/Chil30/vless-all-in-one/main/vless-server.sh && chmod +x vless-server.sh && ./vless-server.sh
-```
-
-### 服务端安装
-
-```bash
-vless
-# 选择 1) 安装新协议
-# 选择协议 (推荐 1-VLESS+Reality)
-# 确认安装
-```
-
-安装完成后显示：
-- **JOIN 码** - 复制给客户端使用
-- **分享链接** - 可导入 v2rayN、Clash、小火箭等
-- **二维码** - 手机扫码导入
-- **订阅链接** - Clash/Surge/V2Ray/Loon 订阅
 
 ### 客户端脚本
 
