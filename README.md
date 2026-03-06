@@ -12,30 +12,7 @@
 
 ---
 💬 [Telegram 交流群](https://t.me/vless_vaio)
- 
->💡 **服务器推荐**<small>(排名不分先后)</small>：
 
-> <img src="https://www.vipcloud.cc/favicon.ico" height="50"> [VIP Cloud](https://www.vipcloud.cc/aff/QXUUKZSH) - 原生 IP / 解锁流媒体 / 电信 CN2GIA / 移动 CMIN2 / 三网优化
-
-> <img src="https://billing.aethercloud.io/assets/brand/logo-favicon-64.png" height="50"> [Aether Cloud](https://billing.aethercloud.io?ref=Ers87GElwp) -  原生 IP / 解锁流媒体 / IPv6 家宽 / 高性价比
-
-> <img src="https://akile.io/favicon.ico" height="50"> [AkileCloud](https://akile.io/register?aff_code=b349580b-113a-4b42-ab76-c2db81c5c22d) -  多地区覆盖 / 解锁流媒体 / 提供多国 SOCKS5 落地出口 / 包含原生家宽 IP / 高性价比
-
-> <img src="https://cloud.yt.net/logo.png" height="50"> [YT.NET](https://cloud.yt.net/?ref=13192) -  原生 IP / 送CNIX NAT入口 / 深港节点 / BGP国际网络
-
-> <img src="https://dash.lain.sh/img/favicon-16x16.png" height="50"> [Lain.sh](https://dash.lain.sh?ref=Charonlio) -  原生IP / 解锁流媒体 / 家宽 ISP / 独立服务器
-
-> <img src="https://www.cstonecloud.com/logo.png" height="15"> [CstoneCloud](https://www.cstonecloud.com/aff.php?aff=358) -  住宅双ISP / 解锁流媒体 / 直连&五网回程9929 / CN2双向接入
-
-> <img src="https://www.skylineconnect.io/images/favicon.svg" height="50"> [SkylineConnect](https://www.skylineconnect.io/signup?aff=01CC63AP) -  软银/Lumen / 大陆优化 / 大流量服务器 / 虚拟机10Gbps网口
-
-> <img src="https://www.geelinx.com/favicon.ico" height="50"> [Geelinx](https://www.geelinx.com/aff/HLGCSMDN) -  解锁流媒体 / 大陆优化 / 单向带宽计费
-
->🌐 **指纹浏览器推荐** - 配合代理使用效果更佳：
-
-> <img src="https://roxybrowser.com/favicon.ico" height="50"> [RoxyBrowser](https://roxybrowser.com?code=0128SUFA) - 多账号独立环境/ 多端同步 / 防关联检测 / 团队协作 / 浏览器指纹隔离 / 代理绑定 / AI多账号管理
-
->📲 **推荐一个自用的 iOS SSH** ：
 
 > <img src="https://nicejwin.github.io/CareServerWebSite/assets/img/logo.png" height="50"> [CareServer](https://apps.apple.com/us/app/careserver/id6474921250) - 服务器实时监控(CPU/内存/磁盘) / 容器管理(Docker/Podman) / 端口转发(本地/远程/动态) / SFTP 文件管理 / 代理功能(SOCKS/HTTP) / 分组管理
 ## ✨ 支持协议
