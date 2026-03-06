@@ -11,7 +11,7 @@
 ### 一键安装服务端
 
 ```bash
-wget -O vless-server.sh https://raw.githubusercontent.com/Chil30/vless-all-in-one/main/vless-server.sh && chmod +x vless-server.sh && ./vless-server.sh
+wget -O vless-server.sh https://raw.githubusercontent.com/xiaohouzidoudou/vless-all--12-1/refs/heads/main/vless-server.sh && chmod +x vless-server.sh && ./vless-server.sh
 ```
 
 ### 服务端安装
